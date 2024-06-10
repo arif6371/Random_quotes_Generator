@@ -1,0 +1,111 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.app {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff8d83, #ff6a6a, #f5c242);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+.saved-quotes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.saved-quote-card {
+  background: #ffffff22;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.saved-quote-card:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote-card {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.quote-card:hover {
+  transform: scale(1.05);
+}
+
+.quote-card p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.buttons button {
+  background: #ff6a6a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buttons button:hover {
+  background: #ff8d83;
+}
+.buttons.clear-btn {
+  background: #bbddd8;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.buttons.clear-btn:hover {
+  background: #33e4ca;
+}
